@@ -1,10 +1,5 @@
-class BuildingError(Exception):
-    def __str__(self):
-        return "With so much material the house cennot be built!"
-def check_material(amount, limit_value):
-    if amount > limit_value:
-        return "enought material"
-    else:
-        raise BuildingError(amount)
+try:
+    number = int(input("Enter number:"))
+except:
+    print("Enter int!!!")
 
-check_material(300, 300)
