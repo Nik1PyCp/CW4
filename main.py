@@ -1,11 +1,10 @@
-def checker(var_1):
-    if type(var_1) != str:
-        raise TypeError(
-            f"Sorry,"
-            f"we can't work with {TypeError},"
-            f"we need class str."
-        )
+class BuildingError(Exception):
+    def __str__(self):
+        return "With so much material the house cennot be built!"
+def check_material(amount, limit_value):
+    if amount > limit_value:
+        return "enought material"
     else:
-        return var_1
+        raise BuildingError(amount)
 
-print(checker("10"))
+check_material(300, 300)
