@@ -2,8 +2,6 @@ try:
     print("start code")
     print(error)
     print("No errors")
-except ImportError:
+except (ImportError, NameError):
     print("We have an ImportError")
-except NameError:
-    print("NameError")
 print("code after capsule")
