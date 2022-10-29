@@ -8,4 +8,4 @@ def checker(var_1):
     else:
         return var_1
 
-checker("10")
+print(checker("10"))
